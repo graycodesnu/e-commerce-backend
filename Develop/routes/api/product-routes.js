@@ -38,7 +38,6 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// TODO: Create new product
 // create new product
 router.post('/', async (req, res) => {
   /* req.body should look like this...
@@ -49,14 +48,13 @@ router.post('/', async (req, res) => {
       tagIds: [1, 2, 3, 4]
     }
   */
-  try { 
-    const newProduct = await Product.create(req.body)
+  Product.create(req.body)
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
       if (req.body.tagIds.length) {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
-            product_id: product.id,
+            product_id: product.id, 
             tag_id,
           };
         });
@@ -72,7 +70,6 @@ router.post('/', async (req, res) => {
     });
 });
 
-// TODO: Update product 
 // update product
 router.put('/:id', (req, res) => {
   // update product data
@@ -118,6 +115,22 @@ router.put('/:id', (req, res) => {
 // TODO: Delete category by id value 
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
+  Product.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(productData => {
+    if (!productData) {
+      res.status(404).json({ message: 'No products found with this id' });
+      return;
+    }
+    res.json(productData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 module.exports = router;
