@@ -37,10 +37,11 @@ Product.init(
     category_id: {
       type: DataTypes.INTEGER,
       refences: {
-        // TODO: foreign keys from category
-      }
-    }
-    }
+        model: 'category',
+        key: 'id',
+      },
+    },
+    },
   },
   {
     sequelize,
