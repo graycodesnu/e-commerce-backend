@@ -49,7 +49,7 @@ router.post('/', async (req, res) => {
 });
 
 // TODO: Update tag name by id value
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   // update a tag's name by its `id` value
   try {
     const tagData = await Tag.update(req.body, {
@@ -68,8 +68,8 @@ router.put('/:id', (req, res) => {
 });
 
 // TODO: Delete tag by id value 
-router.delete('/:id', (req, res) => {
-  // delete on tag by its `id` value
+router.delete('/:id', async (req, res) => {
+  // delete a tag by its `id` value
   try {
     const tagData = await Tag.destroy({
       where: {
