@@ -1,7 +1,7 @@
 # e-commerce-backend
 
 ## Introduction
-This project is a result of our bootcamp's week 6 homework assignment. Students were expected to create a weather generator that would store search results to local storage and display current and five-day forecast conditions. The project can be found [here](https://github.com/graycodesnu/e-commerce-backend) and the demo video can be found [here]().
+A SQL database and RESTful API work together to make a seamless and functional e-commerce backend. The project can be found [here](https://github.com/graycodesnu/e-commerce-backend) and the demo video can be found [here](https://watch.screencastify.com/v/mmAdMHdYuMwKfneXa7Vk).
 ![screenshot](./Develop/assets/getall.png) ![screenshot](Develop/assets/getbyid.png)
 
 ## Goals 
