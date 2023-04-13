@@ -1,7 +1,7 @@
 # e-commerce-backend
 
 ## Introduction
-A SQL database and RESTful API work together to make a seamless and functional e-commerce backend. The project can be found [here](https://github.com/graycodesnu/e-commerce-backend) and the demo video can be found [here](https://watch.screencastify.com/v/mmAdMHdYuMwKfneXa7Vk).
+A seamless and functional e-commerce backend can be achieved by integrating a SQL database and a RESTful API. The SQL database provides a structured data storage system for the e-commerce platform, while the RESTful API facilitates communication between the frontend and the backend. Together, they enable smooth data processing and transaction management, resulting in a robust and reliable e-commerce solution. The project can be found [here](https://github.com/graycodesnu/e-commerce-backend) and the demo video can be found [here](https://watch.screencastify.com/v/mmAdMHdYuMwKfneXa7Vk).
 ![screenshot](./Develop/assets/getall.png) ![screenshot](Develop/assets/getbyid.png)
 
 ## Goals 
